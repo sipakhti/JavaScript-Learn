@@ -90,10 +90,8 @@ for(let index in colors)
 
 /*
     FOR...OF
+    only be used on iterable objects
 */
 
 for (let color of colors)
     console.log(color);
-
-for (let key of person)
-    console.log(key);

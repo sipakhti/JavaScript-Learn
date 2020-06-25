@@ -82,3 +82,76 @@ function showProperties(obj) {
         if (typeof obj[property] === "string")
             console.log(property, obj[property]);
 }
+
+// SUM of MULTIPLES
+
+function sum(limit) {
+	let sum = 0;
+	for (let i = 0; i <= limit; i++)
+		if (multipleOfThree(i) || multipleOfFive(i))
+			sum += i;
+	
+	return sum;
+
+	function multipleOfThree(i) {
+		return i % 3 === 0;
+	}
+
+	function multipleOfFive(i) {
+		return i % 5 === 0;
+	}
+}
+
+
+// GRADE
+
+// Average grade
+// 1-59: F
+// 60-69: D
+// 70-79: C
+// 80-89: B
+// 90-100: A
+
+function calculateGrade(marks) {
+
+	const average = calculateAverage(marks);
+	if (average < 60) return 'F';
+	else if (average < 70) return 'D';
+	else if (average < 80) return 'C';
+	else if (average < 90) return 'B';
+	return 'A';
+
+}
+
+function calculateAverage(array){
+	let sum = 0;
+	for (let value of array)
+		sum += value;
+	
+	return sum/array.length;
+}
+
+// STARS
+
+function showStars(rows) {
+	for (let row = 1; row <= rows; row++)
+		console.log('*'.repeat(row));
+}
+
+// PRIME NUMBERS
+
+function showPrimes(limit){
+	for (let number = 0; number <= limit; number++){
+		
+		if (isPrime(number) && number > 1) console.log(number);
+		}
+}
+
+function isPrime(number) {
+  for (let factor = 2; factor < number; factor++)
+    if (number % factor === 0)
+      return false;
+  
+  return true;
+}
+
