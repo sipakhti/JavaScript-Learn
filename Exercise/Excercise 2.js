@@ -141,16 +141,15 @@ function showStars(rows) {
 // PRIME NUMBERS
 
 function showPrimes(limit){
-	for (let number = 0; number <= limit; number++){
+	for (let number = 2; number <= limit; number++)
 		
-		if (isPrime(number) && number > 1) console.log(number);
-		}
+		if (isPrime(number)) console.log(number);
+		
 }
 
 function isPrime(number) {
   for (let factor = 2; factor < number; factor++)
-    if (number % factor === 0)
-      return false;
+    if (number % factor === 0) return false;
   
   return true;
 }
