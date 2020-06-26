@@ -146,11 +146,15 @@ function showPrimes(limit){
 		if (isPrime(number)) console.log(number);
 		
 }
-
 function isPrime(number) {
-  for (let factor = 2; factor < number; factor++)
+  for (let factor = 2; factor < number/2 + 1; factor++)
     if (number % factor === 0) return false;
   
   return true;
 }
 
+function biggestPrime(limit){
+	for (let number = limit; number > 2; number--)
+	    
+	    if (isPrime(number)) return number;
+}
