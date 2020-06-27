@@ -218,5 +218,7 @@ for (let n of price)
     sum += n;
 console.log(sum);
 
-const result = price.reduce((accumulator, currectValue) => accumulator + currectValue, 0);
+const result = price.reduce(
+    (accumulator, currectValue) => accumulator + currectValue
+);
 console.log(result);
